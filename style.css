@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(./cd76552af0bac713e2153a4584435547.jpg);
+    background-size: cover;
+}
+
+/* NAVBAR */
+nav {
+    background-color: rgb(17, 17, 229);
+    padding: 20px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    border: 3px solid white;
+    background-color: rgb(119, 119, 228);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* HOVER */
+.a1, .a2, .a3, .a4, .a5, .a6, .a7, .a8 {
+    transition: 0.5s;
+}
+
+.a1:hover, .a2:hover, .a3:hover, .a4:hover,
+.a5:hover, .a6:hover, .a7:hover, .a8:hover {
+    transform: translateY(10px);
+}
+
+/* TABLE */
+table {
+    border: 2px solid black;
+    border-spacing: 4px;
+    width: 90%;
+    margin: 30px auto;
+    font-weight: bold;
+    font-size: 20px;
+    height: 200px;
+}
+
+table thead tr {
+    background-color: blue;
+    color: white;
+}
+
+table tbody tr {
+    background-color: rgb(73, 139, 139);
+    text-align: center;
+    color: white;
+}
+
+table td {
+    border: 2px solid blueviolet;
+    padding: 10px;
+}
+
+/* BUTTONS */
+.s1, .s2 {
+    background-color: rgb(69, 69, 130);
+    color: white;
+    height: 50px;
+    width: 150px;
+    display: block;
+    margin: 15px auto;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* LIST */
+ul {
+    background-color: rgb(123, 176, 204);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgb(57, 126, 163);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: white;
+    background-color: rgb(147, 223, 223);
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+/* MEDIA QUERY */
+@media (max-width:768px){
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    ul {
+        font-size: 16px;
+    }
+
+}

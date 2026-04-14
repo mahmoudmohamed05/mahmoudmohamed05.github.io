@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>add-course</title>
+</head>
+<body>
+    <nav>
+        <h1 style="color: white; text-align: center; font-family: 'Courier New', Courier, monospace;">[ This Page To Select the New Course ]</h1>
+        
+        <a href="index.html" target="_blank" class="a1">Home</a>
+        <a href="courses.html" target="_blank" class="a2">My Courses</a>
+        <a href="add-course.html" target="_blank" class="a3">Add Course</a>
+        <a href="contact.html" target="_blank" class="a4">Contact Us</a>
+    </nav>
+    <ul>
+        <li>Use this form to add a new course to your list</li>
+        <li>this page design to select what you need</li>
+        <li>you can find many courses</li>
+        <li>And you can find many Instructor</li>
+        <li>Each Instructor Write the Note About The Course</li>
+    </ul>
+    <div class="d">
+    <form style="background-color: rgba(0, 255, 255, 0.508);">
+        <label style="font-size: 30px; font-weight: bold; color: white; margin-left: 600px; ">Write your name : </label>
+        <br>
+        <input type="name" required placeholder="username" style="margin-left: 650px; border: 1px solid blue; height: 25px;">
+        <br>
+        <hr>
+        <label style="font-size: 30px; font-weight: bold; color: white; margin-left: 600px; ">Write your password : </label>
+        <input type="password" required placeholder="password" style="margin-left: 650px; border: 1px solid blue; height: 25px;">
+        <br>
+        <hr>
+        <label style="font-size: 30px; font-weight: bold; color: white; margin-left: 600px;">Select course you need : </label>
+        <br>
+        <select class="s1">
+            <option>C#</option>
+            <option>Java</option>
+            <option>Go</option>
+            <option>Html</option>
+            <option>Css</option>
+        </select>
+        <hr>
+        <label style="font-size: 30px; font-weight: bold; color: white; margin-left: 600px; ">Select Instructor you need :</label>
+        <select class="s2">
+            <optgroup label="C#">
+                <option>Ahmed</option>
+                <option>Mohamed</option>
+            </optgroup>
+            <optgroup label="Java">
+                <option>Sayed</option>
+                <option>Reda</option>
+            </optgroup>
+            <optgroup label="Go">
+                <option>Abdelrahman</option>
+            </optgroup>
+            <optgroup label="Html">
+                <option>Abdelrahman</option>
+                <option>hamed</option>
+            </optgroup>
+            <optgroup label="Css">
+                <option>Mohamed</option>
+                <option>john</option>
+            </optgroup>
+        </select>
+        <hr>
+        <input type="submit" name="Submit" class="submit" style="margin-left: 48%;">
+    </form>
+    </div>
+</body>
+</html>
