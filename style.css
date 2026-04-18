@@ -1,13 +1,26 @@
-body{
+/* RESET */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url(./cd76552af0bac713e2153a4584435547.jpg);
-    background-size: cover;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background-color: blanchedalmond;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 120px;
+    background-image:url(./cd76552af0bac713e2153a4584435547.jpg);
+}
+
+h1{
+    display:block;
+}
 /* NAVBAR */
 nav {
-    background-color: rgb(17, 17, 229);
+    background-color: rgb(17, 215, 229);
     padding: 20px;
     border-radius: 10px;
 
@@ -15,6 +28,8 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+
+    width: 100%;
 }
 
 nav a {
@@ -22,18 +37,16 @@ nav a {
     border: 3px solid white;
     background-color: rgb(119, 119, 228);
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 10px;
+    transition: 0.3s ease;
+    text-align: center;
+
 }
 
-/* HOVER */
-.a1, .a2, .a3, .a4, .a5, .a6, .a7, .a8 {
-    transition: 0.5s;
-}
-
-.a1:hover, .a2:hover, .a3:hover, .a4:hover,
-.a5:hover, .a6:hover, .a7:hover, .a8:hover {
-    transform: translateY(10px);
+nav a:hover {
+    transform: translateY(-5px);
+    background-color: rgb(90, 90, 210);
 }
 
 /* TABLE */
@@ -41,10 +54,11 @@ table {
     border: 2px solid black;
     border-spacing: 4px;
     width: 90%;
-    margin: 30px auto;
+    margin: 20px auto;
     font-weight: bold;
     font-size: 20px;
-    height: 200px;
+    min-height: 200px;
+    background-color: white;
 }
 
 table thead tr {
@@ -58,13 +72,15 @@ table tbody tr {
     color: white;
 }
 
-table td {
+table td,
+table th {
     border: 2px solid blueviolet;
     padding: 10px;
 }
 
 /* BUTTONS */
-.s1, .s2 {
+.s1,
+.s2 {
     background-color: rgb(69, 69, 130);
     color: white;
     height: 50px;
@@ -72,8 +88,16 @@ table td {
     display: block;
     margin: 15px auto;
     border: none;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.s1:hover,
+.s2:hover {
+    transform: scale(1.05);
+    background-color: rgb(50, 50, 100);
 }
 
 /* LIST */
@@ -85,21 +109,23 @@ ul {
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
+    list-style-position: inside;
 }
 
 /* FOOTER */
-footer {
+footer{
     background-color: rgb(57, 126, 163);
     padding: 20px;
     text-align: center;
-    border-radius: 10px;
-    position: absolute;
+    border-radius: 10px 10px 0 0;
     width: 100%;
-    bottom: 0;
+    margin-top: 30px;
+    position: fixed;
+    bottom:0;
+    left:0;
 }
-
 footer a {
-    color: white;
+    color: black;
     background-color: rgb(147, 223, 223);
     display: inline-block;
     text-decoration: none;
@@ -107,17 +133,29 @@ footer a {
     border: 2px solid white;
     border-radius: 10px;
     margin: 5px;
+    transition: 0.3s ease;
 }
 
-/* MEDIA QUERY */
-@media (max-width:768px){
+footer a:hover {
+    transform: translateY(-5px);
+    background-color: white;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
 
     nav {
         flex-direction: column;
         align-items: center;
     }
 
+    nav a {
+        width: 90%;
+    }
+
     table {
+        display: block;
+        overflow-x: auto;
         font-size: 14px;
     }
 
@@ -125,4 +163,17 @@ footer a {
         font-size: 16px;
     }
 
+    .s1,
+    .s2 {
+        width: 90%;
+    }
+
+    footer a {
+        margin: 8px auto;
+    }
+}
+@media(max-width:450px){
+    table tr, td, th{
+        font-size:0.6rem;
+    }
 }
